@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>میرا مارکیٹ پلیس</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="logo">میرا مارکیٹ پلیس</div><nav><a href="#shop">دکان</a><a href="#seller">Seller</a><a href="#wallet">میرا والٹ</a></nav></header>
+<section class="hero"><h1>اپنی چیزیں بیچیں، اپنی دکان بنائیں</h1><p>مختلف sellers اپنی مصنوعات یہاں لسٹ کر سکتے ہیں۔</p><button onclick="document.querySelector('#seller').scrollIntoView()">Seller بنیں</button></section>
+<section class="toolbar"><input id="search" placeholder="پروڈکٹ تلاش کریں..." oninput="renderProducts()"><select id="cat" onchange="renderProducts()"><option value="">تمام کیٹیگریز</option><option>گھر</option><option>فیشن</option><option>بیوٹی</option><option>الیکٹرانکس</option></select></section>
+<main id="shop"><div id="products" class="grid"></div></main>
+<section id="seller" class="panel"><h2>Seller Dashboard</h2><p>اپنی پروڈکٹ کا نام، قیمت اور کیٹیگری شامل کریں۔</p>
+<input id="pname" placeholder="پروڈکٹ کا نام"><input id="pprice" type="number" placeholder="قیمت"><select id="pcat"><option>گھر</option><option>فیشن</option><option>بیوٹی</option><option>الیکٹرانکس</option></select><button onclick="addProduct()">پروڈکٹ شامل کریں</button></section>
+<section id="wallet" class="panel"><h2>میرا والٹ</h2><div class="wallet"><b>آپ کی کمیشن کمائی: Rs <span id="earn">0</span></b></div>
+<h3>وِڈرا اکاؤنٹ</h3><input id="account" placeholder="اپنا Easypaisa / JazzCash / دوسرے اکاؤنٹ کی تفصیل">
+<button onclick="saveAccount()">اکاؤنٹ محفوظ کریں</button><button class="withdraw" onclick="requestWithdrawal()">وِڈرا ریکویسٹ</button><p id="status"></p></section>
+<footer>یہ Demo Marketplace ہے۔ حقیقی payment gateway اور seller settlements کے لیے محفوظ backend/API integration درکار ہوگی۔</footer>
+<script src="app.js"></script></body></html>
